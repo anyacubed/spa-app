@@ -1,16 +1,13 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { InputI } from '../../interfaces/interfaces';
 
-const initialState: InputI = {
-  inputValue: '',
-};
+const initialState: string = '';
 
 export const inputBarSlice = createSlice({
   name: 'input',
   initialState,
   reducers: {
     setInputValue: (state, action: PayloadAction<string>) => {
-      state.inputValue = action.payload;
+      return action.payload;
     },
   },
 });

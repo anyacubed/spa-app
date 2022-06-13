@@ -1,12 +1,12 @@
 import { FC, useState } from 'react';
 import { useAppSelector, useAppDispatch } from '../../hooks/hooks';
-import { setInputValue } from "../../store/reducers/inputBarSlice";
-import { inputErrorMessage } from "../../utils/constants";
+import { setInputValue } from '../../store/reducers/inputBarSlice';
+import { inputErrorMessage } from '../../utils/constants';
 
 import styles from './Input.module.css';
 
 const Input: FC = () => {
-  const { inputValue } = useAppSelector(state => state.inputBarReducer);
+  const inputValue = useAppSelector(state => state.inputBarReducer);
   const dispatch = useAppDispatch();
   const [isCorrect, setIscorrect] = useState(true);
 
@@ -27,10 +27,10 @@ const Input: FC = () => {
       <input
         value={inputValue}
         className={styles.inputBar}
-        type="text"
-        placeholder="Enter id to filter by it"
+        type='text'
+        placeholder='Enter id to filter by it'
         autoFocus
-        data-testid="input-test"
+        data-testid='input-test'
         onChange={handleChange}
       />
       {!isCorrect && 

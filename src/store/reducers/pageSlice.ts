@@ -1,16 +1,13 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { CurrentPage } from '../../interfaces/interfaces';
 
-const initialState: CurrentPage = {
-  currentPage: 1,
-};
+const initialState: number = 1;
 
 export const pageSlice = createSlice({
   name: 'page',
   initialState,
   reducers: {
     setCurrentPage: (state, action: PayloadAction<number>) => {
-      state.currentPage = action.payload;
+      return action.payload;
     },
   },
 });

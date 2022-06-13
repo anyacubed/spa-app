@@ -1,4 +1,4 @@
-import { baseUrl } from "../utils/constants";
+import { baseUrl } from '../utils/constants';
 
 export const fetchData = async () => {
   const response = await fetch(`${baseUrl}`);

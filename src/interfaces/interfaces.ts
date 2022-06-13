@@ -15,14 +15,6 @@ export interface ApiResponseData {
   pantone_value: string;
 }
 
-export interface CurrentPage {
-  currentPage: number;
-}
-
 export interface PaginationProps {
   pagesCount: number;
-}
-
-export interface InputI {
-  inputValue: string;
 }
